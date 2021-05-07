@@ -63,31 +63,41 @@
                 }, {enableHighAccuracy: true});
                 /*eslint-disable*/
             }
+        },
+        beforeRouteEnter(to,from,next){
+            // debugger;
+            next(vm=>{
+                console.log(vm,vm.shouldChangeCity,'index-route');
+            })
+            
         }
     };
 </script>
 
 <style lang="scss" scoped>
+     @function rem($px) {
+        @return $px * (1/100) * 1rem;
+    }
     .index {
         width: 100%;
         overflow-x: hidden;
         .intro {
             background-color: white;
-            padding: 20px;
-            font-size: 18px;
+            padding: rem(20);
+            font-size: rem(18);
         }
         .address-bar {
-            padding: 0 20px;
+            padding: 0 rem(20);
             background-color: #FFFFFF;
-            border-top: #eeeeee solid 2px;
+            border-top: #eeeeee solid rem(2);
             .address-choose {
-                height: 68px;
-                line-height: 68px;
+                height: rem(68);
+                line-height: rem(68);
                 display: flex;
-                font-size: 24px;
+                font-size: rem(24);
                 .address-choose-title {
                     flex: 1;
-                    font-size: 24px;
+                    font-size: rem(24);
                     color: #111111;
                     font-weight: 500;
                     text-align: left;
@@ -98,7 +108,7 @@
                     text-align: right;
                     .address-choose-icon {
                         font-family: 'iconfont';
-                        padding-left: 20px;
+                        padding-left: rem(20);
                     }
                 }
             }

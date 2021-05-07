@@ -2,3 +2,7 @@ build/*.js
 config/*.js
 src/common/vhomed.js
 src/common/city.js
+src/App.vue
+src/components/page/cityList.vue
+src/components/page/index.vue
+src/

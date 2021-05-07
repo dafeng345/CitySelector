@@ -1,11 +1,12 @@
 module.exports = {
   root: true,
   parser: 'babel-eslint',
+  // 下面三行使用eslint-plugin-html
   parserOptions: {
     sourceType: 'module'
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: 'standard',
+  // extends: 'standard',
   // required to lint *.vue files
   plugins: [
     'html'
